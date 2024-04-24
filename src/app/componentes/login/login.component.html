@@ -1,0 +1,45 @@
+
+<h2 class="degrado-angular" style="text-align: center;">Login</h2>
+<form class="border container p-5 rounded w-50">
+    <div class="row  justify-content-center mb-2 ">
+        <div class="col-10 ">
+            <input type="email" name="txt_mail" id="txt_mail" placeholder=" email" class="form-control"
+                [(ngModel)]="mail">
+        </div>
+    </div>
+    <div class="row justify-content-center mb-2">
+        <div class="col-10">
+            <input type="password" name="txt_password" id="txt_password" placeholder="clave" class="form-control"
+                [(ngModel)]="clave">
+        </div>
+    </div>
+    <div class="row justify-content-center mb-2">
+        <div class="col-4 me-0">
+            <label for="checkboxClave" class="form-check-label">Mostrar clave</label>
+        </div>
+        <div class="col-2 form-check form-switch">
+            <input type="checkbox" name="checkboxClave" id="checkboxClave" (change)="mostrarClave($event)"
+                class="form-check-input" style="background-color:grey !important;">
+        </div>
+    </div>
+
+    <div class="row justify-content-center ">
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-dark w-100" (click)="login()">login</button>
+        </div>
+
+        <div class="col-6">
+            <button type="button" class="btn btn-outline-dark w-100" (click)="registrar()">registrar</button>
+        </div>
+
+    </div>
+    <div class="row justify-content-evenly">
+        <div class="col-4">
+            <small>{{ isLogin}}</small>
+        </div>
+        <div class="col-4">
+            <small>{{ isRegistrado}}</small>
+        </div>
+    </div>
+
+</form>
